@@ -22,17 +22,9 @@
 
 }
 
-
-html {
-	font-family: selectricroman, serif;
-}
-
-h1 {
-	font-family: selectricmono, monospace;
-}
-
-
 /*
+ * MISE EN PAGE
+ *
  * Définition du modèle de boîte
  * Voir : http://cours-web.ch/css/box-model
 */
@@ -44,3 +36,58 @@ html {
   box-sizing: inherit;
 }
 
+html {
+	font-family: selectricroman, serif;
+  background: #eee;
+  text-shadow: 0 0 1em rgba(0,0,0,0.2);
+  letter-spacing: 0.12em;
+  padding: 5vmin 10vw;
+  text-align: center;
+}
+
+html, a {
+  color: #444;
+}
+
+body {
+  /*transform: translateY(-50%);
+  margin-top: 50%;*/
+}
+
+h1 {
+  font-size: 7vw;
+  margin: 0;
+  letter-spacing: 0.12em;
+}
+
+p {
+  font-size: 5vw;
+  line-height: 1.8;
+}
+
+/* Définissons une taille de fonte minimum */
+@media screen and (max-width: 40em) {
+  h1 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.8em;
+  }
+}
+
+a {
+  text-decoration: none;
+  border: 0 solid transparent;
+  border-radius: 50%;
+  border-color: #eee;
+  padding: 0.2em; /* compense la bordure */
+}
+
+a:hover {
+  color: magenta;
+  border-color: cyan;
+  border-width: 0.2em;
+  padding: 0;
+  background-color: yellow;
+  box-shadow: 0 0 0.8em 0.2em magenta;
+}
